@@ -76,6 +76,28 @@ with open("MBTI_Question.txt", "r") as Questions,  \
     print("ลักษณะของคุณคือ : ", *cognitive[2:])
 
     #cognitive functions
+
+    """
+    item = ['E','I','S','N','T','F','J','P'] 
+
+    Areana = [x for x in item if x in type] 
+    Blind_Spot = [x for x in item if x not in type] 
+
+    A = Areana 
+    B = Blind_Spot 
+
+    """ 
+    print(Areana) 
+    print(Blind_Spot) 
+    """ 
+
+    def cognitive_funcition(): 
+        if (type[0] == 'E' and type[3] == 'P') or (type[0] == 'I' and type[3] == 'J') : 
+            return A[1]+A[0], A[2]+B[0], B[2]+A[0], B[1]+B[0] 
+        else: 
+            return A[2]+A[0], A[1]+B[0], B[1]+A[0], B[2]+B[0] 
+    """
+
     primary, secondary, tertiary, quaternary, = cognitive[1].split('-')
     print('กระบวนการความรู้ความเข้าใจ\n')
     print('การทำหน้าที่ลำดับที่ 1 : บทบาทหลัก เป็นสิ่งที่ถูกใช้เพื่อให้ไปสู่ความสำเร็จ\n',show_line(primary,Cognitive))
