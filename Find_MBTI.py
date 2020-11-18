@@ -27,7 +27,6 @@ with open("MBTI_Question.txt", "r") as Questions,  \
                  return line
 
 
-
     E_I_gauge = []
     S_N_gauge = []
     T_F_gauge = []
@@ -86,11 +85,9 @@ with open("MBTI_Question.txt", "r") as Questions,  \
     A = Areana 
     B = Blind_Spot 
 
-    """ 
     print(Areana) 
     print(Blind_Spot) 
-    """ 
-
+   
     def cognitive_funcition(): 
         if (type[0] == 'E' and type[3] == 'P') or (type[0] == 'I' and type[3] == 'J') : 
             return A[1]+A[0], A[2]+B[0], B[2]+A[0], B[1]+B[0] 
